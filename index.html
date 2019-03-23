@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+    <title>WePaintInteriors Cost Estimator</title>
+</head>
+
+<body>
+    <h1>WePaintInteriors Cost Estimator</h1>
+
+    <script>
+        let firstName = prompt('Please enter your First Name?');
+        alert(firstName);
+
+        let lastName = prompt('Please enter your Last Name?');
+        alert(lastName);
+
+        let address = prompt('Please enter your Street Address?');
+        alert(address);
+
+        let city = prompt('Please enter your City?');
+        alert(city);
+
+        let wallWidth = prompt('What is the width of the wall to be painted?');
+        alert(wallWidth);
+
+        let wallHeight = prompt('What is height of the wall to be painted?');
+        alert(wallHeight);
+
+        let number = 175;
+        function cansOfPaint(squareFeet, number) {
+            return squareFeet / number;
+        }
+        let paint = prompt('Do you want premium paint?');
+        alert(paint);
+        if (paint == 'Yes'); {
+            let numberP = 20;
+        } elseif(paint == 'No'); {
+            let numberP = 15;
+        }
+
+        function paintCost(cansOfPaint, numberP) {
+            return cansOfPaint * numberP;
+        }
+
+        function squareFeet(wallWidth, wallHeight) {
+            return wallWidth * wallHeight;
+        }
+        function totalCost(paintCost, tax) {
+            return paintCost * tax;
+        }
+        totalCost = (paintCost, 0.075)
+
+        let response = "";
+        function display() {
+            response += ' Estimate for ' + firstName + lastName + ' of ' + address + ' in ' + city + ':' + " \n" + ' The wall to be painted is ' + wallWidth + ' by ' + wallHeight + ',' + ' or ' + squareFeet + ' square feet ' + '.' + 'This will require' + cansOfPaint + ' cans of paint. ' + ' The cost is ' + paintCost + ' dollars, ' + 'plus tax. ' + ' Total estimated cost is ' + totalCost + '.'
+        }
+        function total() {
+            alert(display)
+        }
+    </script>
+</body>
+
+</html>
